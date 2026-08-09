@@ -1,0 +1,26 @@
+			// Hey! Here is the file containing all the Linux commands I have learned so far. Hope it helps!
+
+:-> pwd: Displays your present/current working directory path.
+:-> ls: Lists files and folders.
+:-> cd: Changes your current directory.
+:-> mkdir: Creates/Make a new direcory.
+:-> touch: Creates a blank file.
+:-> cat: Displays file content immediately.
+:-> cp: Copies files or folders.
+:-> mv: Moves or renames files.   //If move in same folder then it rename the file.
+:-> rm: Deletes/remove files or folders.
+:-> clear: Clears the screen/Terminal.
+
+		//Date commands with flags.
+:-> date: Displays current date, time, and timezone.
+:-> date -u: Displays time in Coordinated Universal Time (UTC).
+:-> date -R: Outputs date in RFC-2822 format for emails.
+:-> date -I: Shows date in ISO-8601 standard format (YYYY-MM-DD).
+:-> date -d "next Friday": Displays the date of the upcoming Friday.
+:-> date -d "yesterday": Shows yesterday's exact date and time.
+:-> date -d "10 days ago": Calculates the date from 10 days in the past.
+:-> date +"%Y-%m-%d": Formats output strictly as Year-Month-Day.
+:-> date +"%H:%M:%S": Formats output strictly as Hours:Minutes:Seconds.
+:-> date +"%A": Displays only the full current weekday name.
+
+
