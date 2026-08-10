@@ -1,5 +1,6 @@
 			// Hey! Here is the file containing all the Linux commands I have learned so far. Hope it helps!
 
+		// Basic Commands
 :-> pwd: Displays your present/current working directory path.
 :-> ls: Lists files and folders.
 :-> cd: Changes your current directory.
@@ -22,5 +23,22 @@
 :-> date +"%Y-%m-%d": Formats output strictly as Year-Month-Day.
 :-> date +"%H:%M:%S": Formats output strictly as Hours:Minutes:Seconds.
 :-> date +"%A": Displays only the full current weekday name.
+
+		// Dispaly, Merge, Sort a file Commands 
+:-> cat: filename: Outputs the entire file content all at once.
+:-> cat > filename: Creates a new file and opens an empty prompt.  // ctrl + D to save file 
+:-> cat >> filename: Appends new text to the bottom of an existing file.  // ctrl + C to cancel opertaion
+:-> cat: f1.txt f2.txt > merged.txt: Combines files end-to-end into a new file.
+:-> less: filename: Opens the file in a scrollable view.
+:-> head: -n 10 filename: Displays only the first 10 lines of a file.Change the number to preview any size header.
+:-> tail: -n 10 filename: Displays only the last 10 lines of a file.Useful for reading the end of logs.
+:-> paste f1.txt f2.txt: Merges lines side-by-side using tabs as delimiters.
+:-> join f1.txt f2.txt:  Merges lines based on a shared common column.
+:-> sort filename: Alphabetizes all text lines from A to Z.
+:-> sort -r filename: Sorts text lines in reverse alphabetical order.
+:-> sort -n filename: Sorts numbers logically by their numerical value.
+:-> sort -u filename: Sorts the file and removes duplicate lines.
+:-> sort -m f1.txt f2.txt: Merges pre-sorted files together very quickly.
+:-> sort -k 2 filenameSorts: the file based on the second column alphabetically
 
 
