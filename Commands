@@ -41,4 +41,138 @@
 :-> sort -m f1.txt f2.txt: Merges pre-sorted files together very quickly.
 :-> sort -k 2 filenameSorts: the file based on the second column alphabetically
 
+		// File Permissions & Execution Commands
+:-> chmod: Changes the permissions of a file or directory.
+:-> chmod +x monitor.sh: Adds execute permission to the monitor.sh Bash script.
+:-> chmod -x monitor.sh: Removes execute permission from the monitor.sh Bash script.
+:-> chmod 755 monitor.sh: Gives the owner read/write/execute permission and others read/execute permission.
+:-> ./monitor.sh: Executes the monitor.sh script from the current directory.
+:-> bash monitor.sh: Executes a Bash script using the Bash interpreter without requiring execute permission.
+
+
+		// Process Monitoring Commands
+:-> ps: Displays a snapshot of currently running processes.
+:-> ps aux: Displays detailed information about processes from all users.
+:-> ps aux --sort=-%cpu: Sorts processes by CPU usage in descending order.
+:-> ps aux --sort=-%mem: Sorts processes by memory usage in descending order.
+:-> top: Displays running processes and system resource usage.
+:-> top -bn1: Runs top in batch mode and takes one monitoring snapshot.
+:-> pkill: Sends a signal to processes matching a specified name.
+:-> pkill yes: Terminates running processes named yes.
+
+
+		// Memory Monitoring Commands
+:-> free: Displays information about system RAM and swap memory.
+:-> free -h: Displays memory information in human-readable units such as MB or GB.
+
+
+		// Disk Monitoring Commands
+:-> df: Displays available and used disk space of filesystems.
+:-> df /: Displays disk-space usage for the filesystem containing the root directory.
+:-> df -h: Displays disk usage in human-readable units such as MB or GB.
+
+
+		// Text Processing Commands
+:-> grep: Searches for lines containing a specified pattern or text.
+:-> grep "Cpu(s)": Searches command output for the CPU information line.
+:-> awk: Processes and extracts structured text and can perform calculations.
+:-> awk '/Mem:/ {print $3}': Finds the Mem line and prints the third field.
+:-> awk '{print $1}': Prints the first field/column from each input line.
+:-> tr: Translates or deletes characters from input.
+:-> tr -d '%': Removes the percentage (%) character from the input.
+
+
+		// Pipe and Redirection
+:-> |: Pipe operator; sends the output of one command as input to another command.
+:-> top -bn1 | grep "Cpu(s)": Sends top output to grep to extract the CPU information line.
+:-> ps aux --sort=-%cpu | head -6: Sends sorted process output to head to display only the first 6 lines.
+:-> >: Redirects command output to a file and overwrites the existing contents.
+:-> >>: Redirects command output to a file and appends it to the existing contents.
+:-> echo "text" > file.txt: Writes text to a file and replaces its previous contents.
+:-> echo "text" >> file.txt: Adds text to the end of an existing file.
+
+
+		// Shell Script Configuration Commands
+:-> source: Loads and executes commands/variables from another shell script in the current shell.
+:-> source config.sh: Loads configuration variables such as CPU_THRESHOLD into the current script.
+:-> . config.sh: Short form of source; loads another shell script into the current shell.
+:-> export: Makes a shell variable available to child processes.
+:-> env: Displays environment variables available to the current process.
+
+
+		// Bash Script Variables
+:-> variable=value: Creates/assigns a value to a Bash variable.
+:-> $variable: Accesses the value stored inside a Bash variable.
+:-> ${variable}: Expands a variable value and is useful when separating the variable name from surrounding text.
+:-> $(command): Command substitution; executes a command and stores/uses its output as a value.
+:-> ${cpu_usage%.*}: Removes the shortest matching . * pattern from the end of the variable value.
+
+
+		// Conditional Commands / Operators
+:-> if: Executes commands when a specified condition is true.
+:-> then: Marks the beginning of commands executed when the if condition is true.
+:-> else: Executes alternative commands when the if condition is false.
+:-> fi: Marks the end of an if statement.
+:-> [ condition ]: Performs a conditional test in Bash.
+:-> -gt: Tests whether one integer is greater than another.
+:-> -lt: Tests whether one integer is less than another.
+:-> -eq: Tests whether two integers are equal.
+:-> -ne: Tests whether two integers are not equal.
+:-> -ge: Tests whether one integer is greater than or equal to another.
+:-> -le: Tests whether one integer is less than or equal to another.
+:-> -f filename: Tests whether a specified path exists and is a regular file.
+
+
+		// Bash Control Flow Commands
+:-> while: Repeatedly executes a block of commands while a condition remains true.
+:-> while true: Creates a loop that continues indefinitely until explicitly terminated.
+:-> do: Marks the beginning of the commands inside a loop.
+:-> done: Marks the end of a loop.
+:-> case: Selects and executes a block of commands based on a matching value.
+:-> esac: Marks the end of a Bash case statement.
+:-> ;;: Terminates an individual case pattern.
+:-> read -p: Displays a prompt and reads user input into a variable.
+
+
+		// Bash Functions
+:-> function_name(): Defines a Bash function.
+:-> function_name: Calls/executes a previously defined Bash function.
+:-> return: Exits a function and can optionally provide a return status.
+
+
+		// Script Interpreter / Shebang
+:-> #!/bin/bash: Shebang line that specifies Bash as the interpreter for the script.
+:-> bash: Shell/interpreter used to execute Bash scripts and commands.
+
+
+		// Log Management Commands
+:-> tail -20 monitor.log: Displays the last 20 lines of the monitoring log.
+:-> tail -10 monitor.log: Displays the last 10 lines of the monitoring log.
+:-> echo "$(date) | CPU: $cpu_usage%" >> monitor.log: Adds a timestamped CPU monitoring entry to the log file.
+
+
+		// Cron / Job Scheduling Commands
+:-> crontab -e: Opens the current user's crontab for editing scheduled jobs.
+:-> crontab -l: Lists the scheduled cron jobs of the current user.
+:-> service cron status: Displays the current status of the cron service.
+:-> systemctl status cron: Displays the status of the cron service on systems using systemd.
+:-> */5 * * * * command: Cron expression that executes the specified command every 5 minutes.
+
+
+		// Cron Expression Fields
+:-> Minute: First field of a cron expression; specifies the minute of execution.
+:-> Hour: Second field of a cron expression; specifies the hour of execution.
+:-> Day of Month: Third field; specifies the day of the month.
+:-> Month: Fourth field; specifies the month.
+:-> Day of Week: Fifth field; specifies the day of the week.
+:-> */5: Means every 5 units; in the minute field it means every 5 minutes.
+:-> *: Means every possible value for that cron field.
+
+
+		// ZIP / Project Deployment Commands
+:-> unzip linux-server-monitor.zip: Extracts the Linux Server Monitor project from the ZIP archive.
+:-> unzip -l linux-server-monitor.zip: Lists the files inside a ZIP archive without extracting them.
+:-> mkdir linux-monitor-test: Creates a separate directory for testing the extracted project.
+:-> find /mnt/k -name "linux-server-monitor.zip": Searches for the ZIP file inside the specified directory.
+
 
